@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<head>
+    <script src="code.js"></script>
+ <header> Play CRAPS</header>
+        <style>
+            .button {
+             border: none;
+             color:rebeccapurple;
+             padding: 16px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+            font-size: 16px;
+             margin: 4px 2px;
+             transition-duration: 0.4s;
+             cursor: pointer;
+            }
+            .button:hover {
+             border: none;
+            color: rgb(255, 144, 172);
+             padding: 16px 32px;
+             text-align: center;
+             text-decoration: none;
+             display: inline-block;
+            font-size: 16px;
+             margin: 4px 2px;
+             transition-duration: 0.4s;
+             cursor: pointer;
+            }
+ 
+        </style>
+
+</head>
+<body>
+    <p id="outcome">  What will you get?</p>
+    
+<button id="button" class="button Play Button" onclick="checkWin">PLAY!!!</button>
+<p id="die1"> </p>
+<p id="die2"> </p>
+<script> src="code.js"
+
+button.onclick=function(checkWin){
+    var die1 = Math.floor(Math.random() * 6) + 1;
+    var die2 = Math.floor(Math.random() * 6) + 1;
+    document.getElementById("die1").innerHTML = "1st die got a: " + die1;
+    document.getElementById("die2").innerHTML = "2nd die got a: " + die2;
+    var lose;
+    if(die1 + die2 == 7  || die1 + die2 == 11){
+        lose =  true;
+    } else{
+        lose = false;
+    }
+    if(lose == true){
+        document.getElementById("outcome").innerHTML ="You lost!!!  CRAPS ";
+    } else{
+        document.getElementById("outcome").innerHTML ="You Win!!!";
+    }
+}
+    
+</script>
+
+
+
+<h1><a href="Home.html">Go back to the home page.</a></h1>
+</body>
